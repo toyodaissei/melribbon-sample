@@ -29,7 +29,7 @@ svg { display: block; }
 .head-left, .head-right { display: flex; align-items: center; }
 .head-right { justify-content: flex-end; }
 .icon { position: relative; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; }
-.logo { font: 30px/1 var(--logo); white-space: nowrap; }
+.logo { font: clamp(23px, 7.4vw, 30px)/1 var(--logo); white-space: nowrap; }
 .count { position: absolute; top: 4px; right: 2px; min-width: 16px; height: 16px; padding: 0 3px; border-radius: 8px; background: var(--ink); color: #fff; font-size: 10px; line-height: 16px; text-align: center; }
 
 .drawer-back { position: fixed; inset: 0; z-index: 40; background: rgba(0, 0, 0, .4); }
@@ -38,16 +38,17 @@ svg { display: block; }
 .drawer a { min-height: 48px; display: flex; align-items: center; border-bottom: 1px solid var(--line); font-size: 14px; }
 
 .heroes { display: grid; grid-template-columns: 1fr; gap: 4px; background: var(--white); border-bottom: 1px solid var(--line); }
-.hero { position: relative; min-height: 100vw; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; overflow: hidden; }
+.hero { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; overflow: hidden; }
 .hero-dark, .hero-bag { display: none; }
 .hero-dark { background: #2f2f33; color: #f0f0f0; }
 .hero-bag { background: #e9dfd7; color: #4d443e; }
 .hero-name { font: 40px/1.1 var(--logo); }
 .hero-note { font-size: 12px; }
-.hero-col { padding: 22px 18px; justify-content: flex-start; background: var(--white); }
+.hero-col { padding: 16px 18px 20px; justify-content: flex-start; background: var(--white); }
 .quilt { position: absolute; inset: 0; width: 100%; height: 100%; }
-.hero-title { position: relative; font: italic 25px "Noto Serif JP", Georgia, serif; color: var(--blue); }
-.torsos { position: relative; width: 100%; max-width: 520px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px 8px; }
+.hero-title { position: relative; font: italic 22px "Noto Serif JP", Georgia, serif; color: var(--blue); }
+.torsos { position: relative; width: 100%; max-width: 270px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start; gap: 8px; }
+.torsos svg { width: 100%; height: auto; aspect-ratio: 80 / 142; }
 
 .section { padding: 40px 10px 34px; border-bottom: 1px solid var(--line); }
 .title { margin: 0 10px 24px; font: 400 20px/1.5 var(--serif); letter-spacing: -.6px; }
@@ -123,6 +124,8 @@ svg { display: block; }
   .heroes { grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 4px; }
   .hero { min-height: 33vw; }
   .hero-dark, .hero-bag { display: flex; }
+  .hero-title { font-size: 25px; }
+  .torsos { max-width: 520px; gap: 12px 8px; }
   .section { padding: 48px clamp(14px, 4vw, 48px); }
   .title { margin: 0 0 36px; font-size: 25px; letter-spacing: -.7px; }
   .title-sm { margin-bottom: 8px; font-size: 22px; }
