@@ -7,63 +7,72 @@
 <title>MEL RIBBON サンプル</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Lato:wght@400;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@500&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700&amp;family=Lato:wght@300;400;700&amp;family=Libre+Caslon+Display&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400&amp;family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 <div class="sample">これはデザイン確認用のサンプルです。購入はできません。</div>
-<a class="notice" href="#" data-sample>[送料や発送日数のお知らせ]</a>
+<a class="info" href="#" data-sample>[送料や発送日数のお知らせ]</a>
 <header class="site-header">
   <div class="head-side">
-    <button class="round" id="menu-open" type="button" aria-label="メニューを開く"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    <button class="round" id="menu-open" type="button" aria-label="メニューを開く"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    <button class="round" type="button" data-sample aria-label="お気に入りを開く"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 20.5 3.5 12a5.2 5.2 0 0 1 7.4-7.4L12 5.7l1.1-1.1a5.2 5.2 0 0 1 7.4 7.4L12 20.5Z"/></svg></button>
   </div>
   <a class="logo" href="index.html">Mel Ribbon</a>
   <div class="head-side right">
-    <button class="round" type="button" data-sample aria-label="カートを開く"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 9h16l-1 12H5L4 9Z"/><path d="M8 9V7a4 4 0 0 1 8 0v2"/></svg></button>
+    <button class="round" type="button" data-sample aria-label="ログイン"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></button>
+    <button class="round" type="button" data-sample aria-label="カートを開く"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4 9h16l-1 12H5L4 9Z"/><path d="M8 9V7a4 4 0 0 1 8 0v2"/></svg></button>
   </div>
 </header>
 <div class="drawer-back" hidden></div>
 <nav class="drawer" aria-label="メニュー" hidden>
-  <button class="round" id="menu-close" type="button" aria-label="メニューを閉じる"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button>
+  <button class="round" id="menu-close" type="button" aria-label="メニューを閉じる"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button>
   <a href="#new">NEW ARRIVAL</a>
-  <a href="#temp">気温で選ぶ</a>
+  <a href="#temp">BY TEMPERATURE</a>
   <a href="#cats">CATEGORY</a>
   <a href="#styling">STYLING</a>
   <a href="#rank">RANKING</a>
+  <a href="#topics">TOPICS</a>
 </nav>
 
 <main>
   <section class="slider" aria-label="特集">
     <a class="slide slide-1" href="#new"><span class="slide-note">[特集写真 1]</span><span class="slide-title">BLACK &amp; RIBBON</span><span class="slide-sub">黒とリボンの、大人かわいい服</span></a>
     <a class="slide slide-2" href="#temp"><span class="slide-note">[特集写真 2]</span><span class="slide-title">BY TEMPERATURE</span><span class="slide-sub">今日の気温で選ぶコーデ</span></a>
-    <a class="slide slide-3" href="#styling"><span class="slide-note">[特集写真 3]</span><span class="slide-title">OUR STYLING</span><span class="slide-sub">モデルの着こなしを見る</span></a>
+    <a class="slide slide-3" href="#styling"><span class="slide-note">[特集写真 3]</span><span class="slide-title">OUR STYLING</span><span class="slide-sub">モデルの着こなし</span></a>
+    <a class="slide slide-4" href="#rank"><span class="slide-note">[特集写真 4]</span><span class="slide-title">BEST ITEMS</span><span class="slide-sub">人気のアイテム</span></a>
+    <a class="slide slide-5" href="#topics"><span class="slide-note">[特集写真 5]</span><span class="slide-title">WINTER MOOD</span><span class="slide-sub">冬のコーデ特集</span></a>
   </section>
   <div class="dots" aria-label="特集を選ぶ">
     <button class="dot" type="button" aria-label="特集1"><span></span></button>
     <button class="dot" type="button" aria-label="特集2"><span></span></button>
     <button class="dot" type="button" aria-label="特集3"><span></span></button>
+    <button class="dot" type="button" aria-label="特集4"><span></span></button>
+    <button class="dot" type="button" aria-label="特集5"><span></span></button>
   </div>
-  <a class="pill-link" href="#new">VIEW MORE <span aria-hidden="true">→</span></a>
-  <p class="welcome">A little ribbon for<br>every day you dress up.</p>
+  <a class="more-link" href="#new">VIEW MORE <span aria-hidden="true">→</span></a>
+  <p class="message">A little ribbon for every day<br>you dress up.</p>
 
   <section class="news" aria-label="お知らせ">
-    <a href="#" data-sample><b>はじめての方へ</b>配送や返品のご案内はこちらです。</a>
-    <a href="#" data-sample><b>気温で選べます</b>20℃から5℃まで、毎日の服選びをお手伝いします。</a>
+    <a href="#" data-sample>＜はじめての方へ＞<br>配送と返品のご案内はこちら。</a>
+    <a href="#" data-sample>＜気温で選ぶ＞<br>20℃から5℃まで、毎日の服選びをお手伝いします。</a>
   </section>
 
-  <section class="sheet" id="new" aria-labelledby="new-title">
-    <div class="tabs center" id="new-tabs">
+  <section class="white" id="new" aria-labelledby="new-title">
+    <div class="tabs" id="new-tabs">
       <button class="tab" type="button" data-value="NEW">NEW</button>
       <button class="tab" type="button" data-value="RE STOCK">RE STOCK</button>
       <button class="tab" type="button" data-value="COMING SOON">COMING SOON</button>
     </div>
     <h2 class="heading" id="new-title">NEW ARRIVAL</h2>
     <div class="grid" id="new-grid"></div>
+    <a class="more-link line" href="#rank">VIEW MORE</a>
   </section>
 
-  <section class="band band-rose" id="temp" aria-labelledby="temp-title">
-    <h2 class="heading" id="temp-title"><small>今日の服選びに迷ったら</small>BY TEMPERATURE</h2>
-    <div class="tabs center" id="temp-tabs">
+  <section class="plain" id="temp" aria-labelledby="temp-title">
+    <p class="lead">今日の服選びに迷ったら</p>
+    <h2 class="heading" id="temp-title">BY TEMPERATURE</h2>
+    <div class="tabs" id="temp-tabs">
       <button class="tab" type="button" data-value="20℃">20℃</button>
       <button class="tab" type="button" data-value="15℃">15℃</button>
       <button class="tab" type="button" data-value="10℃">10℃</button>
@@ -72,29 +81,49 @@
     <div class="grid" id="temp-grid"></div>
   </section>
 
-  <section class="sheet" id="cats" aria-labelledby="cats-title">
-    <h2 class="heading" id="cats-title">CATEGORY</h2>
-    <div class="cats">
+  <section class="rose" id="cats" aria-labelledby="cats-title">
+    <h2 class="label white-text" id="cats-title">CATEGORY</h2>
+    <div class="scroll">
       <a class="cat dark" href="#rank" data-cat="ONE PIECE"><strong>ONE PIECE</strong><span>VIEW MORE</span></a>
       <a class="cat deep" href="#rank" data-cat="TOPS"><strong>TOPS</strong><span>VIEW MORE</span></a>
       <a class="cat mid" href="#rank" data-cat="BOTTOMS"><strong>BOTTOMS</strong><span>VIEW MORE</span></a>
       <a class="cat dark" href="#rank" data-cat="OUTER"><strong>OUTER</strong><span>VIEW MORE</span></a>
+      <a class="cat deep" href="#rank" data-cat="GOODS"><strong>GOODS</strong><span>VIEW MORE</span></a>
     </div>
   </section>
 
-  <section class="band band-rose" id="styling" aria-labelledby="styling-title">
-    <h2 class="heading" id="styling-title"><small>モデルの着こなし</small>STYLING</h2>
-    <div class="staff">
-      <a class="staff-card" href="#new"><div class="photo dark">[着用写真]</div><div class="staff-name">MODEL 01</div><div class="staff-info">[身長]cm</div></a>
-      <a class="staff-card" href="#new"><div class="photo deep">[着用写真]</div><div class="staff-name">MODEL 02</div><div class="staff-info">[身長]cm</div></a>
-      <a class="staff-card" href="#new"><div class="photo mid">[着用写真]</div><div class="staff-name">MODEL 03</div><div class="staff-info">[身長]cm</div></a>
-      <a class="staff-card" href="#new"><div class="photo pale">[着用写真]</div><div class="staff-name">MODEL 04</div><div class="staff-info">[身長]cm</div></a>
+  <section class="plain" id="styling" aria-labelledby="styling-title">
+    <h2 class="heading small" id="styling-title">Our Styling</h2>
+    <div class="tabs staff-tabs">
+      <button class="tab" type="button" aria-pressed="true">Coordination</button>
+      <button class="tab" type="button" data-sample>Model</button>
+      <button class="tab" type="button" data-sample>Search</button>
+    </div>
+    <a class="staff-main" href="#new">
+      <div class="photo dark">[着用写真]</div>
+      <div class="staff-row"><span class="staff-title">MODEL 01</span><span class="chip">[身長]cm</span><span class="chip">15℃の日に</span></div>
+    </a>
+    <div class="staff-grid">
+      <a href="#new"><div class="photo deep">[着用写真]</div><div class="staff-title small">MODEL 02</div><div class="chips"><span class="chip">[身長]cm</span></div></a>
+      <a href="#new"><div class="photo mid">[着用写真]</div><div class="staff-title small">MODEL 03</div><div class="chips"><span class="chip">[身長]cm</span></div></a>
+      <a href="#new"><div class="photo pale">[着用写真]</div><div class="staff-title small">MODEL 04</div><div class="chips"><span class="chip">[身長]cm</span></div></a>
+      <a href="#new"><div class="photo dark">[着用写真]</div><div class="staff-title small">MODEL 05</div><div class="chips"><span class="chip">[身長]cm</span></div></a>
     </div>
   </section>
 
-  <section class="sheet" id="rank" aria-labelledby="rank-title">
-    <h2 class="heading" id="rank-title">RANKING</h2>
-    <div class="tabs" id="rank-tabs">
+  <section class="plain" aria-labelledby="newin-title">
+    <h2 class="label" id="newin-title">NEW IN</h2>
+    <div class="scroll" id="newin-list"></div>
+  </section>
+
+  <section class="plain" aria-labelledby="recent-title">
+    <h2 class="heading" id="recent-title">RECENTLY VIEWED</h2>
+    <div id="recent"><p class="empty">最近閲覧したアイテムはありません</p></div>
+  </section>
+
+  <section class="soft" id="rank" aria-labelledby="rank-title">
+    <h2 class="heading" id="rank-title" style="font-size:26px">RANKING</h2>
+    <div class="tabs grid3" id="rank-tabs">
       <button class="tab" type="button" data-value="ALL">ALL</button>
       <button class="tab" type="button" data-value="ONE PIECE">ONE PIECE</button>
       <button class="tab" type="button" data-value="TOPS">TOPS</button>
@@ -102,27 +131,41 @@
       <button class="tab" type="button" data-value="OUTER">OUTER</button>
       <button class="tab" type="button" data-value="GOODS">GOODS</button>
     </div>
-    <div class="grid" id="rank-grid"></div>
+    <div class="scroll" id="rank-list"></div>
   </section>
 
-  <section class="band band-rose" aria-labelledby="topics-title">
-    <h2 class="heading" id="topics-title">TOPICS</h2>
+  <section class="rose" id="topics" aria-labelledby="topics-title">
+    <h2 class="label white-text" id="topics-title">TOPICS</h2>
     <div class="topics">
-      <a class="topic" href="#" data-sample><div class="photo dark">[写真]</div><div><div class="topic-title">黒とリボンの冬支度</div><div class="topic-text">[特集の紹介文]</div></div></a>
-      <a class="topic" href="#" data-sample><div class="photo deep">[写真]</div><div><div class="topic-title">10℃の日のコーデ</div><div class="topic-text">[特集の紹介文]</div></div></a>
+      <a class="topic" href="#" data-sample><div class="photo dark">[写真]</div><div class="date">2026.11.06</div><h3 class="topic-title">Black &amp; Ribbon</h3></a>
+      <a class="topic" href="#" data-sample><div class="photo deep">[写真]</div><div class="date">2026.11.06</div><h3 class="topic-title">Dress for 10℃</h3></a>
+      <a class="topic" href="#" data-sample><div class="photo mid">[写真]</div><div class="date">2026.11.06</div><h3 class="topic-title">Winter Tweed</h3></a>
     </div>
+    <a class="more-link line" href="#" data-sample>VIEW MORE</a>
+  </section>
+
+  <section class="banners" aria-label="バナー">
+    <a class="banner" href="#" data-sample>Instagram</a>
+    <a class="banner" href="#" data-sample>TikTok</a>
+    <a class="banner" href="#" data-sample>Shopping Guide</a>
   </section>
 </main>
 
 <footer class="foot">
-  <a class="logo" href="index.html">Mel Ribbon</a>
-  <nav aria-label="フッターメニュー">
-    <a href="#" data-sample>Instagram</a>
-    <a href="#" data-sample>TikTok</a>
-    <a href="#" data-sample>特定商取引法に基づく表記</a>
-    <a href="#" data-sample>お問い合わせ</a>
+  <h2>ABOUT</h2>
+  <nav class="foot-links" aria-label="ご案内">
+    <a href="#" data-sample>INFORMATION</a>
+    <a href="#" data-sample>SHOPPING GUIDE</a>
+    <a href="#" data-sample>CONTACT</a>
   </nav>
+  <div class="foot-brand">MEL RIBBON</div>
+  <nav class="legal" aria-label="規約">
+    <a href="#" data-sample>プライバシーポリシー</a>
+    <a href="#" data-sample>利用規約</a>
+    <a href="#" data-sample>特定商取引法表記</a>
+  </nav>
+  <p class="copy">© MEL RIBBON</p>
 </footer>
-<script src="app.js?v=3"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>

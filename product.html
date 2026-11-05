@@ -7,18 +7,18 @@
 <title>MEL RIBBON サンプル</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Lato:wght@400;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@500&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700&amp;family=Lato:wght@300;400;700&amp;family=Libre+Caslon+Display&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Serif+JP:wght@400&amp;family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 <div class="sample">これはデザイン確認用のサンプルです。購入はできません。</div>
 <header class="site-header">
   <div class="head-side">
-    <a class="round" href="index.html" aria-label="トップページに戻る"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></a>
+    <a class="round" href="index.html" aria-label="トップページに戻る"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></a>
   </div>
   <a class="logo" href="index.html">Mel Ribbon</a>
   <div class="head-side right">
-    <button class="round" type="button" data-sample aria-label="カートを開く"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 9h16l-1 12H5L4 9Z"/><path d="M8 9V7a4 4 0 0 1 8 0v2"/></svg><span class="count" hidden>0</span></button>
+    <button class="round" type="button" data-sample aria-label="カートを開く"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4 9h16l-1 12H5L4 9Z"/><path d="M8 9V7a4 4 0 0 1 8 0v2"/></svg><span class="count" hidden>0</span></button>
   </div>
 </header>
 <nav class="crumbs" aria-label="パンくず"><a href="index.html">Home</a><span>/</span><span id="crumb-name"></span></nav>
@@ -34,19 +34,15 @@
         <button class="thumb pale" type="button" data-tone="pale" aria-label="写真4" aria-pressed="false"></button>
       </div>
     </div>
-    <section class="info">
-      <a href="index.html#temp" id="item-tag"></a>
+    <section class="item">
+      <a class="item-tag" href="index.html#temp" id="item-tag"></a>
       <h1 id="item-name"></h1>
       <div class="big-price">[価格]</div>
-      <div>カラー：ブラック</div>
-      <div>サイズ</div>
-      <div class="opts">
-        <button class="size" type="button" aria-pressed="true">S</button>
-        <button class="size" type="button" aria-pressed="false">M</button>
-        <button class="size" type="button" aria-pressed="false">L</button>
-      </div>
+      <div class="opt-label">COLOR：<span id="item-color"></span></div>
+      <div class="opt-label">SIZE</div>
+      <div class="opts"></div>
       <button class="cart-btn" type="button">カートに追加</button>
-      <p>[送料のご案内]</p>
+      <p class="note">[送料のご案内]</p>
     </section>
   </div>
 
@@ -62,7 +58,6 @@
       <tbody>
         <tr><td>S</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr>
         <tr><td>M</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr>
-        <tr><td>L</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr>
       </tbody>
     </table>
     <p style="margin-top:12px">素材：[繊維名と%]</p>
@@ -70,19 +65,20 @@
 
   <section class="panel model-card" aria-label="モデル情報"><div class="avatar"></div><div><b>[モデル名]</b><br>[身長]cm</div></section>
 
-  <section class="more" aria-labelledby="more-title">
+  <section class="soft" aria-labelledby="more-title">
     <h2 class="heading" id="more-title">RECOMMEND</h2>
     <div class="grid" id="more-grid"></div>
   </section>
 </main>
 
 <footer class="foot">
-  <a class="logo" href="index.html">Mel Ribbon</a>
-  <nav aria-label="フッターメニュー">
-    <a href="#" data-sample>特定商取引法に基づく表記</a>
-    <a href="#" data-sample>お問い合わせ</a>
+  <h2>ABOUT</h2>
+  <nav class="legal" aria-label="規約">
+    <a href="#" data-sample>プライバシーポリシー</a>
+    <a href="#" data-sample>利用規約</a>
+    <a href="#" data-sample>特定商取引法表記</a>
   </nav>
 </footer>
-<script src="app.js?v=3"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>
