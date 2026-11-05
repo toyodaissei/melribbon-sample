@@ -1,68 +1,71 @@
 /* MEL RIBBON デザイン確認用サンプル */
+const COLORS = { black: "#201513", ivory: "#f3ece4", beige: "#c8b29f", pink: "#d9a9a4", navy: "#253450", gray: "#8e8784", brown: "#6a4b3e" };
 const PRODUCTS = [
-  { id: "shirt-dress", name: "シャツ襟レイヤードワンピース", cat: "ワンピース", temp: "20℃", tone: "dark" },
-  { id: "ribbon-knit-dress", name: "リボンニットワンピース", cat: "ワンピース", temp: "15℃", tone: "pale" },
-  { id: "tweed-set", name: "ツイードショートセット", cat: "セットアップ", temp: "15℃", tone: "mid" },
-  { id: "chain-bag", name: "チェーンショルダーバッグ", cat: "バッグ", temp: "20℃", tone: "dark" },
-  { id: "fur-down", name: "ファーフードダウン", cat: "アウター", temp: "5℃", tone: "pale" },
-  { id: "wool-coat", name: "配色ウールコート", cat: "アウター", temp: "10℃", tone: "mid" },
-  { id: "quilt-bag", name: "キルティングバッグ", cat: "バッグ", temp: "10℃", tone: "dark" },
-  { id: "back-ribbon-knit", name: "バックリボンニット", cat: "トップス", temp: "15℃", tone: "pale" },
-  { id: "lace-top", name: "レースリブトップス", cat: "トップス", temp: "20℃", tone: "mid" },
-  { id: "dot-dress", name: "ドットボウタイワンピース", cat: "ワンピース", temp: "20℃", tone: "pale" },
-  { id: "double-set", name: "ダブルボタンセットアップ", cat: "セットアップ", temp: "10℃", tone: "dark" },
-  { id: "tweed-jacket", name: "ショートツイードジャケット", cat: "アウター", temp: "15℃", tone: "mid" },
-  { id: "rib-set", name: "リブニットセット", cat: "セットアップ", temp: "10℃", tone: "mid" },
-  { id: "pleat-skirt", name: "プリーツミニスカート", cat: "ボトムス", temp: "15℃", tone: "pale" },
-  { id: "fur-cardigan", name: "ファーカーディガン", cat: "トップス", temp: "5℃", tone: "dark" },
-  { id: "short-pants", name: "ハイウエストショートパンツ", cat: "ボトムス", temp: "20℃", tone: "dark" },
-  { id: "dot-cardigan", name: "ドットリボンカーディガン", cat: "トップス", temp: "10℃", tone: "pale" },
-  { id: "long-down", name: "ベルテッドロングダウン", cat: "アウター", temp: "5℃", tone: "mid" }
+  { id: "shirt-dress", name: "シャツ襟レイヤードワンピース", cat: "ONE PIECE", temp: "20℃", tone: "dark", group: "NEW", colors: ["black", "ivory"] },
+  { id: "ribbon-knit-dress", name: "リボンニットワンピース", cat: "ONE PIECE", temp: "15℃", tone: "pale", group: "NEW", colors: ["black", "pink", "ivory"] },
+  { id: "tweed-set", name: "ツイードショートセット", cat: "TOPS", temp: "15℃", tone: "deep", group: "NEW", colors: ["black", "beige"] },
+  { id: "chain-bag", name: "チェーンショルダーバッグ", cat: "GOODS", temp: "20℃", tone: "mid", group: "NEW", colors: ["black", "ivory"] },
+  { id: "fur-down", name: "ファーフードダウン", cat: "OUTER", temp: "5℃", tone: "dark", group: "COMING SOON", colors: ["black", "gray"] },
+  { id: "wool-coat", name: "配色ウールコート", cat: "OUTER", temp: "10℃", tone: "pale", group: "NEW", colors: ["navy", "beige", "gray"] },
+  { id: "quilt-bag", name: "キルティングバッグ", cat: "GOODS", temp: "10℃", tone: "deep", group: "RE STOCK", colors: ["ivory", "black"] },
+  { id: "back-ribbon-knit", name: "バックリボンニット", cat: "TOPS", temp: "15℃", tone: "mid", group: "RE STOCK", colors: ["gray", "pink", "ivory"] },
+  { id: "lace-top", name: "レースリブトップス", cat: "TOPS", temp: "20℃", tone: "dark", group: "NEW", colors: ["black", "ivory"] },
+  { id: "dot-dress", name: "ドットボウタイワンピース", cat: "ONE PIECE", temp: "20℃", tone: "pale", group: "RE STOCK", colors: ["black"] },
+  { id: "double-set", name: "ダブルボタンセットアップ", cat: "TOPS", temp: "10℃", tone: "deep", group: "COMING SOON", colors: ["navy", "black"] },
+  { id: "tweed-jacket", name: "ショートツイードジャケット", cat: "OUTER", temp: "15℃", tone: "mid", group: "COMING SOON", colors: ["beige", "black"] },
+  { id: "pleat-skirt", name: "プリーツミニスカート", cat: "BOTTOMS", temp: "15℃", tone: "dark", group: "RE STOCK", colors: ["black", "gray"] },
+  { id: "short-pants", name: "ハイウエストショートパンツ", cat: "BOTTOMS", temp: "20℃", tone: "pale", group: "COMING SOON", colors: ["black", "brown"] },
+  { id: "fur-cardigan", name: "ファーカーディガン", cat: "TOPS", temp: "5℃", tone: "deep", group: "RE STOCK", colors: ["black", "pink"] },
+  { id: "long-down", name: "ベルテッドロングダウン", cat: "OUTER", temp: "5℃", tone: "mid", group: "COMING SOON", colors: ["brown", "black"] }
 ];
 
-const HEART = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20.5 3.5 12a5.2 5.2 0 0 1 7.4-7.4L12 5.7l1.1-1.1a5.2 5.2 0 0 1 7.4 7.4L12 20.5Z"/></svg>';
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
-function card(product, rank) {
-  const badge = rank ? `<span class="badge${rank < 4 ? ` b${rank}` : ""}">${rank}</span>` : "";
+function card(product, options = {}) {
+  const swatches = product.colors.map((key) => `<i style="background:${COLORS[key]}"></i>`).join("");
+  const mark = options.rank
+    ? `<span class="rank-no">No.${options.rank}</span>`
+    : `<span class="tag">${product.group === "NEW" ? "NEW" : product.group}</span>`;
   return `<article class="card">
     <a class="card-link" href="product.html?id=${product.id}">
-      <div class="photo ${product.tone}">[写真]${badge}</div>
-      <div class="model">[モデル名]</div>
+      <div class="photo ${product.tone}">[写真]${mark}</div>
+      <div class="colors" aria-hidden="true">${swatches}</div>
       <div class="name">${product.name}</div>
       <div class="price">[価格]</div>
     </a>
-    <button class="heart" type="button" aria-label="${product.name}をお気に入りに追加" aria-pressed="false">${HEART}</button>
+    <button class="quick" type="button" data-quick aria-label="${product.name}をカートに追加"><span>+</span></button>
   </article>`;
 }
 
-function positionHearts() {
+function placeQuickButtons() {
   $$(".card").forEach((item) => {
     const photo = $(".photo", item);
-    const heart = $(".heart", item);
-    if (photo && heart) heart.style.top = `${photo.offsetHeight - 44}px`;
+    const quick = $(".quick", item);
+    if (photo && quick) quick.style.top = `${photo.offsetHeight - 40}px`;
   });
 }
 
-function fill(target, products, ranked) {
+function fill(target, products, options = {}) {
   if (!target) return;
-  target.innerHTML = products.map((product, index) => card(product, ranked ? index + 1 : 0)).join("");
-  positionHearts();
+  target.innerHTML = products.length
+    ? products.map((product, index) => card(product, { rank: options.ranked ? index + 1 : 0 })).join("")
+    : '<p class="empty">該当するアイテムはまだありません。</p>';
+  placeQuickButtons();
 }
 
-function setupTabs(tabGroup, grid, source, keyName) {
-  if (!tabGroup || !grid) return;
+function setupTabs(group, grid, source, key, limit, ranked) {
+  if (!group || !grid) return;
   const show = (value) => {
-    const items = value === "全て" ? source : source.filter((product) => product[keyName] === value);
-    fill(grid, items.slice(0, 6));
-    $$(".tab", tabGroup).forEach((tab) => tab.setAttribute("aria-pressed", String(tab.dataset.value === value)));
+    const items = value === "ALL" ? source : source.filter((product) => product[key] === value);
+    fill(grid, items.slice(0, limit), { ranked });
+    $$(".tab", group).forEach((tab) => tab.setAttribute("aria-pressed", String(tab.dataset.value === value)));
   };
-  tabGroup.addEventListener("click", (event) => {
+  group.addEventListener("click", (event) => {
     const tab = event.target.closest(".tab");
     if (tab) show(tab.dataset.value);
   });
-  show($(".tab", tabGroup).dataset.value);
+  show($(".tab", group).dataset.value);
 }
 
 let toastTimer;
@@ -91,24 +94,50 @@ function setupCommon() {
   $("#menu-open")?.addEventListener("click", () => toggle(true));
   $("#menu-close")?.addEventListener("click", () => toggle(false));
   back?.addEventListener("click", () => toggle(false));
+  $$(".drawer a").forEach((link) => link.addEventListener("click", () => toggle(false)));
   document.addEventListener("keydown", (event) => { if (event.key === "Escape") toggle(false); });
   document.addEventListener("click", (event) => {
-    const heart = event.target.closest(".heart");
-    if (heart) heart.setAttribute("aria-pressed", String(heart.getAttribute("aria-pressed") !== "true"));
+    if (event.target.closest("[data-quick]")) toast("サンプルのため、実際の注文はできません。");
     if (event.target.closest("[data-sample]")) {
       event.preventDefault();
       toast("このページはサンプルです。");
     }
   });
-  window.addEventListener("resize", positionHearts);
+  window.addEventListener("resize", placeQuickButtons);
+}
+
+function setupSlider() {
+  const slider = $(".slider");
+  if (!slider) return;
+  const slides = $$(".slide", slider);
+  const dots = $$(".dot");
+  const mark = (active) => dots.forEach((dot, index) => dot.setAttribute("aria-pressed", String(index === active)));
+  const current = () => {
+    const center = slider.scrollLeft + slider.clientWidth / 2;
+    let best = 0;
+    slides.forEach((slide, index) => {
+      const distance = Math.abs(slide.offsetLeft + slide.offsetWidth / 2 - center);
+      const bestDistance = Math.abs(slides[best].offsetLeft + slides[best].offsetWidth / 2 - center);
+      if (distance < bestDistance) best = index;
+    });
+    return best;
+  };
+  slider.addEventListener("scroll", () => mark(current()), { passive: true });
+  dots.forEach((dot, index) => dot.addEventListener("click", () => {
+    const slide = slides[index];
+    slider.scrollTo({ left: slide.offsetLeft - (slider.clientWidth - slide.offsetWidth) / 2 });
+    mark(index);
+  }));
+  mark(0);
 }
 
 function setupHome() {
-  fill($("#rank-grid"), PRODUCTS.slice(0, 9), true);
-  setupTabs($("#new-tabs"), $("#new-grid"), PRODUCTS.slice(9).concat(PRODUCTS.slice(0, 9)), "cat");
-  setupTabs($("#temp-tabs"), $("#temp-grid"), PRODUCTS, "temp");
+  setupSlider();
+  setupTabs($("#new-tabs"), $("#new-grid"), PRODUCTS, "group", 8, false);
+  setupTabs($("#temp-tabs"), $("#temp-grid"), PRODUCTS, "temp", 4, false);
+  setupTabs($("#rank-tabs"), $("#rank-grid"), PRODUCTS, "cat", 4, true);
   $$("[data-cat]").forEach((link) => link.addEventListener("click", () => {
-    $(`#new-tabs .tab[data-value="${link.dataset.cat}"]`)?.click();
+    $(`#rank-tabs .tab[data-value="${link.dataset.cat}"]`)?.click();
   }));
 }
 
@@ -118,7 +147,7 @@ function setupProduct() {
   document.title = `${product.name} | MEL RIBBON`;
   $("#crumb-name").textContent = product.name;
   $("#item-name").textContent = product.name;
-  $("#item-tag").textContent = `#${product.temp}の日に`;
+  $("#item-tag").textContent = `${product.temp}の日に`;
   const main = $("#main-photo");
   const setTone = (tone) => { main.className = `main ${tone}`; };
   setTone(product.tone);
@@ -143,10 +172,10 @@ function setupProduct() {
     count.hidden = false;
     toast("サンプルのため、実際の注文はできません。");
   });
-  fill($("#more-grid"), PRODUCTS.filter((item) => item.id !== product.id).slice(0, 6));
+  fill($("#more-grid"), PRODUCTS.filter((item) => item.id !== product.id).slice(0, 4));
 }
 
 setupCommon();
-if ($("#rank-grid")) setupHome();
+if ($("#new-grid")) setupHome();
 if ($("#item-name")) setupProduct();
-document.fonts?.ready.then(positionHearts);
+document.fonts?.ready.then(placeQuickButtons);
