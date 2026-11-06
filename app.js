@@ -1,4 +1,4 @@
-/* MEL RIBBON デザイン確認用サンプル */
+/* NOELLE デザイン確認用サンプル */
 const COLORS = { BLK: "#201513", IVO: "#f3ece4", BEG: "#c8b29f", PNK: "#d9a9a4", NVY: "#253450", GRY: "#8e8784", BRN: "#6a4b3e" };
 const PRODUCTS = [
   { id: "shirt-dress", name: "シャツ襟レイヤードワンピース", cat: "ONE PIECE", temp: "20℃", tone: "dark", group: "NEW", colors: ["BLK", "IVO"], sizes: "S M" },
@@ -178,7 +178,7 @@ function setupProduct() {
   const params = new URLSearchParams(location.search);
   const product = PRODUCTS.find((item) => item.id === params.get("id")) || PRODUCTS[1];
   saveRecent(product.id);
-  document.title = `${product.name} | MEL RIBBON`;
+  document.title = `${product.name} | NOELLE`;
   $("#crumb-name").textContent = product.name;
   $("#item-name").textContent = product.name;
   $("#item-tag").textContent = `${product.temp}の日に`;
